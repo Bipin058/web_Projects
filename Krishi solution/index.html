@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Business Website</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="banner">
+    <img src="banner.jpg" alt="Banner Image">
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Business Logo">
+      <h1>Krishi Solution</h1>
+      <div class="logo2">
+        <img src="logo2.png" alt="Business Logo">
+        <h1>Krishi Mechinery</h1>
+      </div>
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <div class="slideshow">
+      <img src="powertiller.jpg" alt="Photo 1" onclick="openModal('powertiller.jpg')">
+      <img src="powertiller2.jpg" alt="Photo 2" onclick="openModal('powertiller2.jpg')">
+      <img src="plastic ghar.jpg" alt="Photo 3" onclick="openModal('plastic ghar.jpg')">
+      <img src="mulching.jpg" alt="Photo 4" onclick="openModal('mulching.jpg')">
+      <img src="minitiller.jpg" alt="Photo 5" onclick="openModal('minitiller.jpg')">
+      <img src="rickshaw.jpg" alt="Photo 6" onclick="openModal('rickshaw.jpg')">
+      <img src="on field.jpg" alt="Photo 7" onclick="openModal('on field.jpg')">
+      <img src="hilo.jpg" alt="Photo 8" onclick="openModal('hilo.jpg')">
+      <img src="group.jpg" alt="Photo 9" onclick="openModal('group.jpg')">
+      <!-- Add more images as needed -->
+    </div>
+  </section>
+ </section>
+
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img id="modalImage" class="modal-content" src="" alt="Modal Image">
+</div>
+
+
+<script>
+  function openModal(imageUrl) {
+    var modal = document.getElementById("myModal");
+    var modalImage = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImage.src = imageUrl;
+  }
+
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+</script>
+
+  <section class="location">
+    <h2>Location</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14081.110395019512!2d81.6369876!3d28.0770741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3998670fcf610bb7%3A0x77e595f1ccc3385e!2sKrishi%20Solution!5e0!3m2!1sen!2snp!4v1689142196561!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 Your Business. All rights reserved.</p>
+  </footer>
+</body>
+</html>
